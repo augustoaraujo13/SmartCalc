@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalc Pro | Dark Edition</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main id="home" class="view">
+        <header>
+            <h1>Smart<span>Calc</span></h1>
+            <p>Selecione a ferramenta desejada</p>
+        </header>
+
+        <div class="card-container">
+            <div class="glass-card main-card" onclick="irPara('calc-horas')">
+                <div class="icon-box purple">🕒</div>
+                <div class="card-text">
+                    <h3>Calculadora de Horas</h3>
+                    <p>Soma, subtração e intervalos de tempo.</p>
+                </div>
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="glass-card main-card" onclick="irPara('calc-math')">
+                <div class="icon-box blue">🔢</div>
+                <div class="card-text">
+                    <h3>Matemática Completa</h3>
+                    <p>Operações básicas e funções avançadas.</p>
+                </div>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </main>
+
+    <section id="calc-horas" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>Cálculo de Horas</h2>
+            
+            <div class="input-row">
+                <div class="input-field">
+                    <label>Hora A</label>
+                    <input type="time" id="h1">
+                </div>
+                <div class="input-field">
+                    <label>Hora B</label>
+                    <input type="time" id="h2">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-action" onclick="operarHoras('soma')">Somar</button>
+                <button class="btn-action outline" onclick="operarHoras('sub')">Subtrair</button>
+            </div>
+
+            <div class="display-res">
+                <small>RESULTADO TOTAL</small>
+                <h2 id="resHora">00:00</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="calc-math" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>Matemática Completa</h2>
+            
+            <div class="math-inputs">
+                <input type="number" id="n1" placeholder="Primeiro valor">
+                <input type="number" id="n2" placeholder="Segundo valor">
+            </div>
+
+            <div class="math-grid-btns">
+                <button onclick="math('soma')">+</button>
+                <button onclick="math('sub')">-</button>
+                <button onclick="math('mult')">×</button>
+                <button onclick="math('div')">÷</button>
+                <button onclick="math('raiz')">√</button>
+                <button onclick="math('pot')">x²</button>
+            </div>
+
+            <div class="display-res">
+                <small>RESULTADO FINAL</small>
+                <h2 id="resMath">0</h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="static/js/scripty.js"></script>
+</body>
+</html>
