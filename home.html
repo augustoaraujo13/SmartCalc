@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartCalc Pro | Dark Edition</title>
+    <title>SmartCalc Pro | All-in-One</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -20,23 +20,35 @@
             <p>Selecione a ferramenta desejada</p>
         </header>
 
-        <div class="card-container">
+        <div class="card-grid">
             <div class="glass-card main-card" onclick="irPara('calc-horas')">
                 <div class="icon-box purple">🕒</div>
-                <div class="card-text">
-                    <h3>Calculadora de Horas</h3>
-                    <p>Soma, subtração e intervalos de tempo.</p>
-                </div>
-                <span class="arrow">→</span>
+                <div class="card-text"><h3>Horas</h3><p>Soma e intervalos.</p></div>
             </div>
 
             <div class="glass-card main-card" onclick="irPara('calc-math')">
                 <div class="icon-box blue">🔢</div>
-                <div class="card-text">
-                    <h3>Matemática Completa</h3>
-                    <p>Operações básicas e funções avançadas.</p>
-                </div>
-                <span class="arrow">→</span>
+                <div class="card-text"><h3>Matemática</h3><p>Funções completas.</p></div>
+            </div>
+
+            <div class="glass-card main-card" onclick="irPara('calc-porcentagem')">
+                <div class="icon-box green">%</div>
+                <div class="card-text"><h3>Porcentagem</h3><p>Descontos e juros.</p></div>
+            </div>
+
+            <div class="glass-card main-card" onclick="irPara('calc-regra3')">
+                <div class="icon-box yellow">X</div>
+                <div class="card-text"><h3>Regra de 3</h3><p>Proporções.</p></div>
+            </div>
+
+            <div class="glass-card main-card" onclick="irPara('calc-imc')">
+                <div class="icon-box red">⚖️</div>
+                <div class="card-text"><h3>IMC</h3><p>Saúde corporal.</p></div>
+            </div>
+
+            <div class="glass-card main-card" onclick="irPara('calc-valhora')">
+                <div class="icon-box cyan">💰</div>
+                <div class="card-text"><h3>Valor/Hora</h3><p>Ganhos por tempo.</p></div>
             </div>
         </div>
     </main>
@@ -44,54 +56,79 @@
     <section id="calc-horas" class="view hidden">
         <div class="glass-card tool-page">
             <button class="btn-back" onclick="irPara('home')">← Voltar</button>
-            <h2>Cálculo de Horas</h2>
-            
+            <h2>🕒 Cálculo de Horas</h2>
             <div class="input-row">
-                <div class="input-field">
-                    <label>Hora A</label>
-                    <input type="time" id="h1">
-                </div>
-                <div class="input-field">
-                    <label>Hora B</label>
-                    <input type="time" id="h2">
-                </div>
+                <div class="input-field"><label>Hora A</label><input type="time" id="h1"></div>
+                <div class="input-field"><label>Hora B</label><input type="time" id="h2"></div>
             </div>
-
             <div class="btn-group">
                 <button class="btn-action" onclick="operarHoras('soma')">Somar</button>
                 <button class="btn-action outline" onclick="operarHoras('sub')">Subtrair</button>
             </div>
-
-            <div class="display-res">
-                <small>RESULTADO TOTAL</small>
-                <h2 id="resHora">00:00</h2>
-            </div>
+            <div class="display-res"><small>RESULTADO</small><h2 id="resHora">00:00</h2></div>
         </div>
     </section>
 
     <section id="calc-math" class="view hidden">
         <div class="glass-card tool-page">
             <button class="btn-back" onclick="irPara('home')">← Voltar</button>
-            <h2>Matemática Completa</h2>
-            
-            <div class="math-inputs">
-                <input type="number" id="n1" placeholder="Primeiro valor">
-                <input type="number" id="n2" placeholder="Segundo valor">
+            <h2>🔢 Matemática</h2>
+            <div class="input-row">
+                <input type="number" id="n1" placeholder="Valor 1">
+                <input type="number" id="n2" placeholder="Valor 2">
             </div>
-
             <div class="math-grid-btns">
-                <button onclick="math('soma')">+</button>
-                <button onclick="math('sub')">-</button>
-                <button onclick="math('mult')">×</button>
-                <button onclick="math('div')">÷</button>
-                <button onclick="math('raiz')">√</button>
-                <button onclick="math('pot')">x²</button>
+                <button onclick="math('soma')">+</button><button onclick="math('sub')">-</button>
+                <button onclick="math('mult')">×</button><button onclick="math('div')">÷</button>
+                <button onclick="math('raiz')">√</button><button onclick="math('pot')">x²</button>
             </div>
+            <div class="display-res"><small>RESULTADO</small><h2 id="resMath">0</h2></div>
+        </div>
+    </section>
 
-            <div class="display-res">
-                <small>RESULTADO FINAL</small>
-                <h2 id="resMath">0</h2>
+    <section id="calc-porcentagem" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>% Porcentagem</h2>
+            <div class="input-field"><label>Quanto é (%):</label><input type="number" id="porc_p" placeholder="10"></div>
+            <div class="input-field"><label>De (valor total):</label><input type="number" id="porc_v" placeholder="500"></div>
+            <button class="btn-action green-btn" onclick="calcPorcentagem()">Calcular</button>
+            <div class="display-res"><h2 id="resPorc">0</h2></div>
+        </div>
+    </section>
+
+    <section id="calc-regra3" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>X Regra de Três</h2>
+            <div class="r3-container">
+                <div class="r3-row"><input type="number" id="r3_a"><span>está para</span><input type="number" id="r3_b"></div>
+                <div class="r3-row"><input type="number" id="r3_c"><span>está para</span><input type="text" value="X" disabled class="x-input"></div>
             </div>
+            <button class="btn-action yellow-btn" onclick="calcRegra3()">Descobrir X</button>
+            <div class="display-res"><h2 id="resR3">0</h2></div>
+        </div>
+    </section>
+
+    <section id="calc-imc" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>⚖️ IMC</h2>
+            <input type="number" id="imc_peso" placeholder="Peso (kg)">
+            <input type="number" id="imc_alt" placeholder="Altura (m)">
+            <button class="btn-action red-btn" onclick="calcIMC()">Analisar</button>
+            <div class="display-res"><h2 id="resIMC">0</h2><p id="statusIMC" style="font-size: 0.9rem; margin-top: 5px;"></p></div>
+        </div>
+    </section>
+
+    <section id="calc-valhora" class="view hidden">
+        <div class="glass-card tool-page">
+            <button class="btn-back" onclick="irPara('home')">← Voltar</button>
+            <h2>💰 Valor da Hora</h2>
+            <input type="number" id="sal_mensal" placeholder="Salário Mensal">
+            <input type="number" id="horas_mes" placeholder="Horas trabalhadas no mês">
+            <button class="btn-action cyan-btn" onclick="calcValorHora()">Calcular</button>
+            <div class="display-res"><small>VALOR POR HORA</small><h2 id="resValHora">R$ 0,00</h2></div>
         </div>
     </section>
 
