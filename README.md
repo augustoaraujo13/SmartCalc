@@ -1,44 +1,47 @@
-# SmartCalc# 🚀 SmartCalc Pro - Hub de Ferramentas Inteligentes
+# 🚀 SmartCalc Pro - Hub de Ferramentas Inteligentes
 
 ![Licença](https://img.shields.io/github/license/seu-usuario/smart-calc-pro?color=6366f1)
 ![Tamanho do Repositório](https://img.shields.io/github/repo-size/seu-usuario/smart-calc-pro?color=a855f7)
+![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
 
-**SmartCalc Pro** é uma aplicação web moderna e responsiva que reúne diversas calculadoras essenciais em um único lugar. Com um design focado em **Glassmorphism** e **Dark Mode**, o projeto oferece uma experiência de usuário fluida e elegante.
+O **SmartCalc Pro** é uma aplicação web moderna e responsiva que reúne ferramentas essenciais de cálculo em um único lugar. Desenvolvido com foco em **UX (User Experience)** e design **Glassmorphism**, o projeto oferece uma interface elegante em modo escuro (Midnight Dark Mode) para facilitar o uso no dia a dia.
 
+---
 
+## 🔗 Links Importantes
+
+* **🌐 Acesse a Ferramenta:** [CLIQUE AQUI PARA TESTAR O SITE](https://smartfaciliti.blogspot.com/p/root-bg-dark-0f172a-card-dark-rgba30-41.html)
+* **📖 Leia a Postagem Completa:** [VEJA O ARTIGO NO BLOGGER](https://smartfaciliti.blogspot.com/2026/01/smartcalc-pro-o-hub-de-ferramentas-que.html/)
+
+---
 
 ## 🛠️ Funcionalidades
 
-O hub conta com 6 ferramentas principais:
+O hub conta com 6 ferramentas especializadas:
 
-* 🕒 **Calculadora de Horas:** Realiza soma e subtração de períodos (HH:mm), ideal para gestão de banco de horas.
-* 🔢 **Matemática Completa:** Operações básicas, raiz quadrada, potência e divisão inteligente.
-* % **Porcentagem:** Cálculo rápido de descontos, acréscimos e valores parciais.
-* ✖️ **Regra de Três:** Interface intuitiva para resolver proporções matemáticas.
-* ⚖️ **Cálculo de IMC:** Analisador de Índice de Massa Corporal com feedback de status de saúde.
-* 💰 **Valor/Hora:** Ajuda profissionais freelancers ou CLT a descobrirem o valor real da sua hora trabalhada.
+* 🕒 **Cálculo de Horas:** Soma e subtração de períodos no formato HH:mm (Base 60).
+* 🔢 **Matemática Completa:** Operações fundamentais, raiz quadrada, potência e divisão inteligente.
+* **% Porcentagem:** Cálculos rápidos de descontos, juros e valores parciais.
+* **✖️ Regra de Três:** Interface intuitiva para resolver proporções matemáticas rapidamente.
+* **⚖️ Saúde & IMC:** Analisador de Índice de Massa Corporal com feedback instantâneo de saúde.
+* **💰 Valor/Hora:** Calculadora financeira para freelancers e profissionais descobrirem o valor real do seu tempo.
 
-## 🎨 Design & UX
+## 🎨 Destaques do Projeto
 
-O projeto foi construído seguindo as últimas tendências de design de interface:
-- **Midnight Dark Mode:** Paleta de cores otimizada para reduzir a fadiga ocular.
-- **Glassmorphism:** Efeito de transparência e desfoque de fundo (backdrop-filter).
-- **Smooth Navigation:** Transições animadas entre as telas para uma sensação de App Nativo.
-- **Responsividade:** Totalmente adaptado para Desktop, Tablets e Smartphones.
-
-
+* **Design Glassmorphism:** Efeitos de desfoque e transparência para uma aparência premium.
+* **Single Page Application (SPA):** Navegação instantânea entre ferramentas sem recarregar a página.
+* **Totalmente Responsivo:** Design adaptável para celulares, tablets e computadores.
+* **Focado em Acessibilidade:** Contraste otimizado para leitura e redução de fadiga ocular.
 
 ## 🚀 Tecnologias Utilizadas
 
-Este é um projeto **Vanilla Web**, focado em performance e leveza:
+- **HTML5:** Estrutura semântica e moderna.
+- **CSS3:** Estilização avançada com Variáveis, Grid e Flexbox.
+- **JavaScript (ES6+):** Lógica de cálculos e sistema de roteamento interno.
+- **Google Fonts:** Tipografia elegante com a fonte *Inter*.
 
-- **HTML5:** Estrutura semântica dos elementos.
-- **CSS3:** Estilização avançada com Flexbox, Grid e Variáveis (Custom Properties).
-- **JavaScript (ES6+):** Lógica de cálculos, manipulação de DOM e sistema de navegação SPA.
-- **Google Fonts:** Tipografia moderna com a fonte *Inter*.
+## 📂 Como rodar localmente
 
-## 📂 Como rodar o projeto
-
-1. Clone o repositório:
+1. Clone este repositório:
    ```bash
-   git clone [https://github.com/augustoaraujo13/SmartCalc.git]
+   git clone [https://github.com/seu-usuario/smart-calc-pro.git](https://github.com/seu-usuario/smart-calc-pro.git)
